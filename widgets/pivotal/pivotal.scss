@@ -1,0 +1,25 @@
+$background-color:  #9c4274;
+$full-color:  rgba(255, 255, 255, 1);
+$light-color: rgba(255, 255, 255, 0.4);
+
+.widget-pivotal {
+  background-color: $background-color;
+
+  .title {
+    color: $light-color;
+  }
+
+  table {
+    margin: 30px 0px;
+
+    tr {
+      &:nth-child(even) {
+        background-color: $light-color;
+      }
+    }
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

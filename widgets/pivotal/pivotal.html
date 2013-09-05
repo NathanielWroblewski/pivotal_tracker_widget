@@ -1,0 +1,22 @@
+<h1 class="title" data-bind="title"></h1>
+<table class="table">
+<th>Unstarted</th>
+<tr data-class="pivotal" data-foreach-story="unstarted">
+    <td data-bind="story | raw"></td>
+  </tr>
+</table>
+<table>
+<th>Started</th>
+<tr data-class="pivotal" data-foreach-story="started">
+    <td data-bind="story | raw"></td>
+  </tr>
+</table>
+<table>
+<th>Finished</th>
+<tr data-class="pivotal" data-foreach-story="finished">
+    <td data-bind="story | raw"></td>
+  </tr>
+</table>
+
+<p class="more-info">Powered by PivotalLabs</p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
