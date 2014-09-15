@@ -1,11 +1,10 @@
 require 'pivotal-tracker'
 
 SCHEDULER.every '30m', first_in: 0 do |job|
-  username  = '' # <-- Your PivotalTracker username goes here
-  password  = '' # <-- Your PivotalTracker password goes here
+  api_token = '' # <-- Your PivotalTracker API token goes here
   full_name = '' # <-- Your name as it appears in PivotalTracker
 
-  PivotalTracker::Client.token(username, password)
+  PivotalTracker::Client.token = api_token
 
   statuses = [:unstarted, :started, :finished]
   stories  = Hash.new { |hash, key| hash[key] = [] }
